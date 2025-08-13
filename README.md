@@ -28,5 +28,5 @@
 - Install Flask:
   - Within the activated environment, use the following command to install Flask: `$ pip install Flask`
 - Verify the installations : `$ python3 --version`
-- 
+- copy the dependencies to requirements.txt : `pip freeze > requirements.txt`
   
