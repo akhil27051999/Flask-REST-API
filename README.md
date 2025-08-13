@@ -20,9 +20,8 @@
 
 - Create a project folder and a .venv folder within:
   ```bash
-  $ mkdir myproject
-  $ cd myproject
-  $ python3 -m venv .venv
+  mkdir myproject && cd myproject
+  python3 -m venv .venv
   ```
 - Activate the environment :
   ```bash
