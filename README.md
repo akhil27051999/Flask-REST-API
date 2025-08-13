@@ -12,9 +12,9 @@
           User ec2-user (or) ubuntu
           IdentityFile ~/path/to/my-key.pem
     ```
-  - Clone the empty project repository to the EC2 server
-    - Add VS code extension : `Git pull requests and issues`
-    - clone the repository into EC2.
+- Clone the empty project repository to the EC2 server
+   - Add VS code extension : `Git pull requests`
+   - clone the repository into EC2.
 
 ## Project Prerequisites
 
