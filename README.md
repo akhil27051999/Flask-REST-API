@@ -3,6 +3,7 @@
 - Launch an EC2 Instance
 - Create a empty Git repository
 - Connect EC2 instance with the VS Code Editor
+  
   - Add VS code extension : `Remote SSH`
   - Edit SSH Config File
     ```yaml
@@ -12,7 +13,9 @@
           User ec2-user (or) ubuntu
           IdentityFile ~/path/to/my-key.pem
     ```
+    
 - Clone the empty project repository to the EC2 server
+  
    - Add VS code extension : `Git pull requests`
    - clone the repository into EC2.
 
