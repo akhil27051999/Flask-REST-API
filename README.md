@@ -1,8 +1,8 @@
 # Simple REST API Webserver
 
 ### Overview: 
-Created a Student CRUD REST API using python programming language and Flask web framework.
-With this we can able to:
+**Created a Student CRUD REST API using python programming language and Flask web framework.
+With this we can able to:**
 - `Create`: Add a new student.
 - `Read` (All): Retrieve a list of all students.
 - `Read` (One): Retrieve details of a specific student by ID.
