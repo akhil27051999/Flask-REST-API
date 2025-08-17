@@ -1,3 +1,2 @@
-# ignore .venv files into git
-/app/.venv/*
+# ignore virtual env files into git
 /venv/*
