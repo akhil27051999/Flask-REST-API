@@ -11,7 +11,7 @@ With this we can able to:
 
 ## Purpose of the Repo
 
-- The following RESTful design principles and standards were implemented with the help of `Twelve Factor App` and `Best Practices for REST API Design`
+**The following RESTful design principles and standards were implemented with the help of `Twelve Factor App` and `Best Practices for REST API Design`**
 
 - **Versioning:**
 
