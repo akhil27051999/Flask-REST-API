@@ -9,7 +9,7 @@ With this we can able to:
 - `Update`: Modify existing student information.
 - `Delete`: Remove a student record by ID.
 
-### Purpose of the Repo
+## Purpose of the Repo
 
 - The following RESTful design principles and standards were implemented with the help of `Twelve Factor App` and `Best Practices for REST API Design`
 
@@ -37,7 +37,7 @@ With this we can able to:
   Each endpoint is covered by unit tests to ensure proper functionality and error handling.
 
 
-### Project Prerequisites
+## Project Prerequisites
 
 - Create a project folder and a .venv folder within:
   ```bash
