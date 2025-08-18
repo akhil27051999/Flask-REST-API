@@ -1,4 +1,4 @@
-from . import db   # 👈 import db from __init__.py, not re-create it
+from . import db   # Import db from the app package
 
 class Student(db.Model):
     __tablename__ = "students"
