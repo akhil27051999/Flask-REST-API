@@ -42,20 +42,40 @@ With this we can able to:**
 - Create a project folder and a .venv folder within:
   ```bash
   mkdir myproject && cd myproject
-  python3 -m venv .venv
   ```
+
+- Install python3-venv:
+  ```bash
+  sudo apt update
+  sudo apt install python3-venv python3-pip
+  ```
+
+- Create a new virtual environment:
+  ```bash
+  python3 -m venv venv
+  ```
+
 - Activate the environment :
   ```bash
-  . .venv/bin/activate
+  source venv/bin/activate
   ```  
+
+- Verify Python and pip installation:
+  ```bash
+  python3 --version
+  pip --version
+  ```
+
 - Within the activated environment, use the following command to install tools:
   ```bash
   pip install Flask Flask-SQLAlchemy Flask-Migrate python-dotenv
   ```  
+
 - To verify and list the installations :
   ```bash
   python3 --version && pip list
   ```
+
 - copy the dependencies to requirements.txt :
   ```bash
   pip freeze > requirements.txt
