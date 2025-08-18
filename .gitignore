@@ -1,3 +1,4 @@
 # ignore virtual env files into git
 /venv/*
 .env
+app/__pycache__/*
