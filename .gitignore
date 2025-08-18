@@ -1,2 +1,3 @@
 # ignore virtual env files into git
 /venv/*
+.env
