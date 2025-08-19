@@ -1,7 +1,13 @@
 # ignore virtual env files into git
 /venv/*
+
+# ignore environment variable files
 .env
+
+# ignore Python bytecode files
 app/__pycache__/*
 __pycache__/
 *.pyc
 
+# ignore log files
+*.log
