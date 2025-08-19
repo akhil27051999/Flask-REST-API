@@ -6,3 +6,4 @@ class Student(db.Model):
     name = db.Column(db.String(50), nullable=False)
     domain = db.Column(db.String(50), nullable=False)
     gpa = db.Column(db.Float, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
