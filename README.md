@@ -68,7 +68,7 @@ With this we can able to:**
 
 - Within the activated environment, use the following command to install tools:
   ```bash
-  pip install Flask Flask-SQLAlchemy Flask-Migrate python-dotenv
+  pip install Flask Flask-SQLAlchemy Flask-Migrate python-dotenv pytest
   ```  
 
 - To verify and list the installations :
@@ -80,4 +80,36 @@ With this we can able to:**
   ```bash
   pip freeze > requirements.txt
   ```
-  
+
+## Project Local Setup
+
+- Install dependencies
+  ```
+  make install
+  ```
+  - (or run pip install -r requirements.txt directly)
+
+- Run the App
+  ```
+  make run
+  ```
+
+- Flask app will start at:
+  ```url
+  http://127.0.0.1:5000
+  ```
+
+  - Endpoints:
+    - / → Welcome message
+    - /health → Health check
+    - /students → Manage students
+      
+- Run all unit tests:
+  ```
+  make test
+  ```
+  Or directly:
+
+  ```
+  pytest -v
+  ```
