@@ -4,6 +4,9 @@
 # ignore environment variable files
 .env
 
+# ignore testing environment variable files
+.env.test
+
 # ignore Python bytecode files
 app/__pycache__/*
 __pycache__/
