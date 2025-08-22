@@ -14,8 +14,7 @@ def create_app():
 
     # Initialize logger
     logger = setup_logger('student_logger', log_file='app.log')
-    app.logger = logger
-    logger.info("Student Management API started successfully.")
+    app.logger.info("Student Management API started successfully.")
 
     # Initialize database and migration
     db.init_app(app)
