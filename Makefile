@@ -1,6 +1,6 @@
 # Makefile for Flask REST API project
 
-# Variables
+# Local Variables
 
 PYTHON=python
 PIP=pip
@@ -9,6 +9,14 @@ FLASK_APP=app
 VENV=venv
 REQ=requirements.txt
 
+# Docker Variables
+DOCKER_IMAGE=multi-stage-app
+DOCKER_IMAGE_TAG ?= 1.0.0
+DOCKER_CONTAINER=myapp-container
+
+# Local commands
+
+.DEFAULT_GOAL := help
 
 help:
 	@echo "Available commands:"
@@ -33,3 +41,24 @@ test:
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	rm -rf .pytest_cache
+
+# Docker commands
+
+docker-build:
+	docker build -t $(DOCKER_IMAGE):$(DOCKER_IMAGE_TAG) .
+
+docker-run:
+	docker run -d -p 5000:5000 --name $(DOCKER_CONTAINER) $(DOCKER_IMAGE):$(DOCKER_IMAGE_TAG)
+
+docker-stop:
+	docker stop $(DOCKER_CONTAINER) || true
+	docker rm $(DOCKER_CONTAINER) || true
+
+docker-logs:
+	docker logs -f $(DOCKER_CONTAINER)
+
+docker-clean:
+	docker rmi $(DOCKER_IMAGE):$(DOCKER_IMAGE_TAG) || true
+
+.PHONY: help install freeze run test clean docker-build docker-run docker-stop docker-logs docker-clean
+
