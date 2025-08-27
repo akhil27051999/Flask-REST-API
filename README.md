@@ -116,14 +116,14 @@ With this we can able to:**
 
 ## Containerising the REST API
 
-**Containerised REST API with the Docker best practices and reduced both Size and Build Time of my Docker Image:**
+### Containerised REST API with the Docker best practices and reduced both Size and Build Time of my Docker Image:
   - Used `python:3.10-alpine` for base image which resulted in reducing the image size because of it's lightweight version that supports the build process without impacting it's functionality. as a resultant the application image size reduced from `1.26GB` to `176MB`.
 
   - Followed Multi-stage Dockerfile method, this helped to reduce the image size from `176MB` to `110MB`, This approach ensures that only the essential runtime files are included in the final image, reducing size and improving performance.
 
   - Overall I managed to reduce the original `1.26GB` image to just `110MB`, achieving a `91.27%` size decrease while maintaining the same functionality and improving rebuild times by an average of 20 seconds.
 
-### Docker Commands
+#### Docker Commands
 
 - **Build the Docker Image:**
   - Built the image with semantic versioning tags:
@@ -182,7 +182,6 @@ With this we can able to:**
   ```sh
   make docker logs
   ```
-
   or directly with Docker:
 
   ```sh
