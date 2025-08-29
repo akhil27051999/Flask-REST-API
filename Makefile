@@ -45,7 +45,7 @@ clean:
 # Docker commands
 
 docker-build:
-	docker build -t $(DOCKER_IMAGE):$(DOCKER_IMAGE_TAG) .
+	docker build -f app/Dockerfile -t $(DOCKER_IMAGE):$(DOCKER_IMAGE_TAG) .
 
 docker-run:
 	docker run -d -p 5000:5000 --name $(DOCKER_CONTAINER) $(DOCKER_IMAGE):$(DOCKER_IMAGE_TAG)
