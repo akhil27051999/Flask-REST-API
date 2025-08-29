@@ -177,7 +177,7 @@ With this we can able to:**
   docker rmi ${DOCKER_IMAGE}:${DOCKER_IMAGE_TAG}
   ```
 
--  **For Troubleshooting Container issue:**
+- **For Troubleshooting Container issue:**
   - To check container logs using make command
   ```sh
   make docker logs
