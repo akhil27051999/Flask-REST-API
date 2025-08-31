@@ -33,7 +33,7 @@ jobs:
       - name: Run Tests with sqlite
         env:
           FLASK_ENV: testing
-          DATABASE_URL: sqlite:///:memory:
+          DATABASE_URL: "sqlite:///:memory:"
         run: pytest -v
 
       - name: Build Docker Image
