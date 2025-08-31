@@ -188,3 +188,81 @@ With this we can able to:**
   docker logs -f ${DOCKER_CONTAINER}
   ```
   
+## One click local development setup
+
+- Created docker-compose.yml file to containerise Flask (API) and Postgres (DB) together, with persistent volumes for one click local development setup.
+
+### Docker Compose Commands
+
+1. To start the service stack 
+  ```sh
+  docker compose up -d --build
+  ```
+  or 
+
+  ```txt
+  make up
+  ```
+
+2. To stop and remove everything (including volumes)
+  ```sh
+  docker compose down -v
+  ```
+
+  or 
+
+  ```txt
+  make down
+  ```
+
+### For Database Migration & Seeding
+  - After starting the containers, you need to run migrations (to create tables) and optionally seed data.
+
+1. Apply migrations inside the Flask container
+  ```sh
+  docker exec -it flask-container flask db upgrade
+  ```
+
+  or 
+
+  ```txt
+  make migrate
+  ```
+
+2. To Seed the database with initial data
+  ```sh
+  docker exec -it flask-container python seed.py
+  ```
+
+  or 
+
+  ```txt
+  make seed
+  ```
+
+3. Verify Database
+
+- To connect into the Postgres container
+  ```sh
+  docker exec -it postgres-container psql -U postgres -d studentdb
+  ```
+
+- Then inside psql:
+  ```sql
+  \dt           -- list tables
+  SELECT * FROM students LIMIT 5;
+  ```
+
+4. To Run API container (depends on DB + migrations + seed)
+
+  ```txt
+  make run
+  ```
+
+### API Endpoints
+
+- Once containers are up, the API will be available at:
+
+  http://localhost:5000/students
+
+  http://localhost:5000/health
