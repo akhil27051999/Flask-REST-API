@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "ad25f90b-7288-4a62-8f04-f1935054d2eb",
+		"name": "student-table-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47469264"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://35.153.189.149:5001/",
+					"protocol": "http",
+					"host": [
+						"35",
+						"153",
+						"189",
+						"149"
+					],
+					"port": "5001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/health",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/students",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"domain\": \"Electronics and Communication Engineering\",\r\n    \"email\": \"160101130012@cutm.ac.in\",\r\n    \"gpa\": 8.2,\r\n    \"name\": \"Meeraj SD\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://35.153.189.149:5001/students",
+					"protocol": "http",
+					"host": [
+						"35",
+						"153",
+						"189",
+						"149"
+					],
+					"port": "5001",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/students",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/students/1",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/students/5",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"domain\": \"Electronics and Communication Engineering\",\r\n    \"email\": \"160101130012@cutm.ac.in\",\r\n    \"gpa\": 8.2,\r\n    \"id\": 4,\r\n    \"name\": \"Meeraj SD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://35.153.189.149:5001/students/5",
+					"protocol": "http",
+					"host": [
+						"35",
+						"153",
+						"189",
+						"149"
+					],
+					"port": "5001",
+					"path": [
+						"students",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/students/5",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/sudents/5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"domain\": \"Electronics and Communication Engineering\",\r\n    \"email\": \"160101130012@cutm.ac.in\",\r\n    \"gpa\": 8.2,\r\n    \"id\": 4,\r\n    \"name\": \"Meeraj SD\"\r\n}"
+				},
+				"url": {
+					"raw": "http://35.153.189.149:5001/students/5",
+					"protocol": "http",
+					"host": [
+						"35",
+						"153",
+						"189",
+						"149"
+					],
+					"port": "5001",
+					"path": [
+						"students",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/students",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
