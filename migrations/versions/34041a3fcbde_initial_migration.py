@@ -1,8 +1,8 @@
-"""create students table
+"""initial migration
 
-Revision ID: 7aee6c929e5c
+Revision ID: 34041a3fcbde
 Revises: 
-Create Date: 2025-08-18 19:23:14.018386
+Create Date: 2025-08-29 16:34:43.059728
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '7aee6c929e5c'
+revision = '34041a3fcbde'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -23,7 +23,9 @@ def upgrade():
     sa.Column('name', sa.String(length=50), nullable=False),
     sa.Column('domain', sa.String(length=50), nullable=False),
     sa.Column('gpa', sa.Float(), nullable=False),
-    sa.PrimaryKeyConstraint('id')
+    sa.Column('email', sa.String(length=120), nullable=False),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('email')
     )
     # ### end Alembic commands ###
 
