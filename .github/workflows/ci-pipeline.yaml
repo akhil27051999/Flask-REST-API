@@ -30,7 +30,10 @@ jobs:
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Tests
+      - name: Run Tests with sqlite
+        env:
+          FLASK_ENV: testing
+          DATABASE_URL: sqlite:///:memory:
         run: pytest -v
 
       - name: Build Docker Image
@@ -56,5 +59,4 @@ jobs:
         run: |
           docker rmi flask-app:$IMAGE_TAG || true
           docker rmi ${{ secrets.DOCKER_HUB_USERNAME }}/flask-app:$IMAGE_TAG || true
-          docker rmi ${{ secrets.DOCKER_HUB_USERNAME }}/flask-app:$BRANCH_TAG || true
           docker system prune -f || true
