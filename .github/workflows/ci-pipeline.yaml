@@ -31,8 +31,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Tests with SQLite
-        env:
-          FLASK_ENV: testing
         run: |
           pytest -v
 
