@@ -6,7 +6,7 @@ from .logger import setup_logger
 db = SQLAlchemy()
 migrate = Migrate()
 
-def create_app():
+def create_app(config_class=None):
     app = Flask(__name__)
 
     # Configure the app
