@@ -10,7 +10,11 @@ def create_app():
     app = Flask(__name__)
 
     # Configure the app
-    app.config.from_object('app.config.Config')
+    if config_class:
+        app.config.from_object(config_class)
+    else:
+        app.config.from_object('app.config.Config')
+
 
     # Initialize logger
     logger = setup_logger('student_logger', log_file='app.log')
