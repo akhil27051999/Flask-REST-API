@@ -1,5 +1,9 @@
 # Simple REST API Webserver
 
+### Architecture view
+<img width="820" height="1121" alt="Student-REST-API" src="https://github.com/user-attachments/assets/7cf42e7e-2f11-4b5e-8250-34b10de0c67b" />
+
+
 ### Overview: 
 **Created a Student CRUD REST API using python programming language and Flask web framework.
 With this we can able to:**
