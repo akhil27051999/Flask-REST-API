@@ -10,8 +10,7 @@ from tests.config import TestConfig
 @pytest.fixture
 def client():
     # Create the app with TestConfig
-    app = create_app()
-    app.config.from_object(TestConfig)
+    app = create_app(config_class=TestConfig)
 
     # Setup DB
     with app.app_context():
