@@ -1,7 +1,7 @@
 # Simple REST API Webserver
 
 ### Architecture view
-<img width="820" height="1121" alt="Student-REST-API" src="https://github.com/user-attachments/assets/7cf42e7e-2f11-4b5e-8250-34b10de0c67b" />
+<img width="815" height="1491" alt="Student-REST-API" src="https://github.com/user-attachments/assets/bea24604-bd9c-464a-a3bb-e0f9ade67456" />
 
 
 ### Overview: 
