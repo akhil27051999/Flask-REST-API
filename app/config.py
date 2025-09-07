@@ -10,7 +10,7 @@ class Config:
     # postgresql settings
     POSTGRES_USER = os.getenv('POSTGRES_USER', 'user')
     POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD', 'password')
-    POSTGRES_HOST = os.getenv('POSTGRES_HOST', 'postgres')
+    POSTGRES_HOST = os.getenv('POSTGRES_HOST', 'localhost')
     POSTGRES_DB = os.getenv('POSTGRES_DB', 'dbname')
     POSTGRES_PORT = os.getenv('POSTGRES_PORT', '5432')
 
