@@ -2,7 +2,8 @@
 /venv/*
 
 # ignore environment variable files
-.env
+.env.dev
+.env.prod
 
 # ignore testing environment variable files
 .env.test
