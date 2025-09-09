@@ -4,6 +4,7 @@
 # ignore environment variable files
 .env.dev
 .env.prod
+vagrant/.env
 
 # ignore testing environment variable files
 .env.test
@@ -16,3 +17,9 @@ __pycache__/
 
 # ignore log files
 *.log
+
+# ignore pem files
+vagrant/*.pem
+
+# ignore Vagrant state
+.vagrant
