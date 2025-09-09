@@ -2,7 +2,8 @@
 /venv/*
 
 # ignore environment variable files
-.env
+.env.dev
+.env.prod
 
 # ignore testing environment variable files
 .env.test
@@ -10,6 +11,7 @@
 # ignore Python bytecode files
 app/__pycache__/*
 __pycache__/
+.pytest_cache
 *.pyc
 
 # ignore log files
