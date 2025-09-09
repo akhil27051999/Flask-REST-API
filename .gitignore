@@ -22,4 +22,4 @@ __pycache__/
 vagrant/*.pem
 
 # ignore Vagrant state
-.vagrant
+vagrant/.vagrant
